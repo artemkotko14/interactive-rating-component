@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+
+<body>
+  <main>
+
+    <!-- Rating state start -->
+    <section class="card" id="rating-state">
+      <div class="icon-container">
+        <img src="images/icon-star.svg" alt="star icon" class="star-icon">
+      </div>
+      <div class="text-content">
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+        <fieldset class="rating">
+
+          <input type="radio" class="rating-input" id="rating-1" name="rating" value="1">
+          <label class="rating-label" for="rating-1">1</label>
+          <input type="radio" class="rating-input" id="rating-2" name="rating" value="2">
+          <label class="rating-label" for="rating-2">2</label>
+          <input type="radio" class="rating-input" id="rating-3" name="rating" value="3">
+          <label class="rating-label" for="rating-3">3</label>
+          <input type="radio" class="rating-input" id="rating-4" name="rating" value="4">
+          <label class="rating-label" for="rating-4">4</label>
+          <input type="radio" class="rating-input" id="rating-5" name="rating" value="5">
+          <label class="rating-label" for="rating-5">5</label>
+        </fieldset>
+      </div>
+      <button class="submit-btn">Submit</button>
+    </section>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <section class="card" id="thank-you-state">
+      <img src="images/illustration-thank-you.svg" alt="Illustration of a phone and card with abstract shapes"
+        class="thank-you-illustration">
+      <p class="selected-rating">
+        You selected 4 out of 5
+      </p>
+      <div class="message-container">
+        <h1>Thank you!</h1>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+      </div>
+    </section>
+    <!-- Thank you state end -->
+
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>

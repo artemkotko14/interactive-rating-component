@@ -1,0 +1,35 @@
+const btnSubmit = document.querySelector(".submit-btn");
+const rating = document.querySelector(".rating");
+const ratingInput = document.querySelectorAll(".rating-input");
+const ratingLabels = document.querySelectorAll(".rating-label");
+const ratingState = document.getElementById("rating-state");
+const thankYouState = document.getElementById("thank-you-state");
+const selectedRatingText = document.querySelector(".selected-rating");
+
+let selectedRating = null;
+for (let i = 0; i < ratingInput.length; i++) {
+  ratingInput[i].addEventListener("change", function () {
+    let selectedRadio = rating.querySelector('input[name="rating"]:checked');
+    let selectedLabel = document.querySelector(
+      `label[for="${selectedRadio.id}"]`,
+    );
+    ratingLabels.forEach((label) => label.classList.remove("selected"));
+    selectedLabel.classList.add("selected");
+  });
+}
+
+btnSubmit.addEventListener("click", function () {
+  if (!rating.querySelector('input[name="rating"]:checked')) {
+    alert("Please select a rating before submitting.");
+    return;
+  } else {
+    let selectedRadio = rating.querySelector('input[name="rating"]:checked');
+    let selectedLabel = document.querySelector(
+      `label[for="${selectedRadio.id}"]`,
+    );
+    selectedRating = selectedRadio.value;
+    selectedRatingText.innerHTML = `You selected ${selectedRating} out of 5`;
+  }
+  ratingState.style.display = "none";
+  thankYouState.style.display = "flex";
+});
