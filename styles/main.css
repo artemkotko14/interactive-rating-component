@@ -120,7 +120,7 @@ p {
   border: none;
 }
 .submit-btn:hover,
-.submit-btn:focus {
+.submit-btn:focus-visible {
   cursor: pointer;
   outline: none;
   background-color: var(--white);
