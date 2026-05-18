@@ -33,5 +33,5 @@ btnSubmit.addEventListener("click", function () {
   }
   ratingState.style.display = "none";
   thankYouState.style.display = "flex";
-  thankYouState.focus();
+  selectedRatingText.focus();
 });
