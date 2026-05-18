@@ -22,17 +22,14 @@ ratingInput.forEach((input) => {
 });
 
 btnSubmit.addEventListener("click", function () {
-  if (!rating.querySelector('input[name="rating"]:checked')) {
+  const selectedRadio = rating.querySelector('input[name="rating"]:checked');
+  if (!selectedRadio) {
     ratingError.classList.remove("hidden");
     return;
-  } else {
-    const selectedRadio = rating.querySelector('input[name="rating"]:checked');
-    const selectedLabel = document.querySelector(
-      `label[for="${selectedRadio.id}"]`,
-    );
-    selectedRating = selectedRadio.value;
-    selectedRatingText.textContent = `You selected ${selectedRating} out of 5`;
   }
+  selectedRating = selectedRadio.value;
+  selectedRatingText.textContent = `You selected ${selectedRating} out of 5`;
+
   ratingState.classList.add("hidden");
   thankYouState.classList.remove("hidden");
 
