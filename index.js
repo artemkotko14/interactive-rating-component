@@ -10,13 +10,13 @@ const ratingError = document.getElementById("rating-error");
 
 let selectedRating = null;
 ratingInput.forEach((input) => {
-  input.addEventListener("change", function () {
-    ratingError.classList.add("hidden");
-    const selectedRadio = rating.querySelector('input[name="rating"]:checked');
-    const selectedLabel = document.querySelector(
-      `label[for="${selectedRadio.id}"]`,
-    );
+  input.addEventListener("change", function (event) {
     ratingLabels.forEach((label) => label.classList.remove("selected"));
+
+    const selectedLabel = document.querySelector(
+      `label[for="${event.target.id}"]`,
+    );
+
     selectedLabel.classList.add("selected");
   });
 });
