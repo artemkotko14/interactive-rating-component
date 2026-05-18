@@ -5,7 +5,6 @@ const ratingLabels = document.querySelectorAll(".rating-label");
 const ratingState = document.getElementById("rating-state");
 const thankYouState = document.getElementById("thank-you-state");
 const selectedRatingText = document.querySelector(".selected-rating");
-const thankYouHeading = document.getElementById("thank-you-heading");
 
 let selectedRating = null;
 
@@ -34,6 +33,5 @@ btnSubmit.addEventListener("click", function () {
   }
   ratingState.classList.add("hidden");
   thankYouState.classList.remove("hidden");
-
-  thankYouHeading.focus();
+  thankYouState.focus();
 });

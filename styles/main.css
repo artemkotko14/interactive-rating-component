@@ -91,6 +91,8 @@ p {
 .rating-input:focus-visible + .rating-label {
   cursor: pointer;
   outline: none;
+
+  /* visible alternative focus style */
   background-color: var(--white);
   color: var(--grey900);
 
@@ -124,6 +126,8 @@ p {
 .submit-btn:focus-visible {
   cursor: pointer;
   outline: none;
+
+  /* visible alternative focus style */
   background-color: var(--white);
 }
 .thank-you-state {
