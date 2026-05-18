@@ -25,8 +25,8 @@ btnSubmit.addEventListener("click", function () {
     alert("Please select a rating before submitting.");
     return;
   } else {
-    let selectedRadio = rating.querySelector('input[name="rating"]:checked');
-    let selectedLabel = document.querySelector(
+    const selectedRadio = rating.querySelector('input[name="rating"]:checked');
+    const selectedLabel = document.querySelector(
       `label[for="${selectedRadio.id}"]`,
     );
     selectedRating = selectedRadio.value;
