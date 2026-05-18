@@ -16,7 +16,7 @@ ratingInput.forEach((input) => {
     const selectedLabel = document.querySelector(
       `label[for="${event.target.id}"]`,
     );
-
+    ratingError.classList.add("hidden");
     selectedLabel.classList.add("selected");
   });
 });
