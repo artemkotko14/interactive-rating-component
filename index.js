@@ -6,11 +6,12 @@ const ratingState = document.getElementById("rating-state");
 const thankYouState = document.getElementById("thank-you-state");
 const selectedRatingText = document.querySelector(".selected-rating");
 const thankYouHeading = document.getElementById("thank-you-heading");
+const ratingError = document.getElementById("rating-error");
 
 let selectedRating = null;
-// for (let i = 0; i < ratingInput.length; i++)
 ratingInput.forEach((input) => {
   input.addEventListener("change", function () {
+    ratingError.classList.add("hidden");
     const selectedRadio = rating.querySelector('input[name="rating"]:checked');
     const selectedLabel = document.querySelector(
       `label[for="${selectedRadio.id}"]`,
@@ -22,7 +23,7 @@ ratingInput.forEach((input) => {
 
 btnSubmit.addEventListener("click", function () {
   if (!rating.querySelector('input[name="rating"]:checked')) {
-    alert("Please select a rating before submitting.");
+    ratingError.classList.remove("hidden");
     return;
   } else {
     const selectedRadio = rating.querySelector('input[name="rating"]:checked');

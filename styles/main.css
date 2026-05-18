@@ -212,6 +212,11 @@ p {
     padding: 0.2rem 1.2187rem 0;
   }
 }
+.error-message {
+  color: red;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
 .hidden {
   display: none;
 }
