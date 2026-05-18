@@ -5,13 +5,14 @@ const ratingLabels = document.querySelectorAll(".rating-label");
 const ratingState = document.getElementById("rating-state");
 const thankYouState = document.getElementById("thank-you-state");
 const selectedRatingText = document.querySelector(".selected-rating");
+const thankYouHeading = document.getElementById("thank-you-heading");
 
 let selectedRating = null;
 
 ratingInput.forEach((input) => {
   input.addEventListener("change", function () {
-    let selectedRadio = rating.querySelector('input[name="rating"]:checked');
-    let selectedLabel = document.querySelector(
+    const selectedRadio = rating.querySelector('input[name="rating"]:checked');
+    const selectedLabel = document.querySelector(
       `label[for="${selectedRadio.id}"]`,
     );
     ratingLabels.forEach((label) => label.classList.remove("selected"));
@@ -33,5 +34,6 @@ btnSubmit.addEventListener("click", function () {
   }
   ratingState.style.display = "none";
   thankYouState.style.display = "flex";
-  selectedRatingText.focus();
+
+  thankYouHeading.focus();
 });
