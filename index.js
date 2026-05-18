@@ -32,8 +32,8 @@ btnSubmit.addEventListener("click", function () {
     selectedRating = selectedRadio.value;
     selectedRatingText.textContent = `You selected ${selectedRating} out of 5`;
   }
-  ratingState.style.display = "none";
-  thankYouState.style.display = "flex";
+  ratingState.classList.add("hidden");
+  thankYouState.classList.remove("hidden");
 
   thankYouHeading.focus();
 });

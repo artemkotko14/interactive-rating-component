@@ -25,7 +25,7 @@ body {
   border-radius: 15px;
   background: var(--gradient);
 }
-#rating-state {
+.rating-state {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -126,9 +126,8 @@ p {
   outline: none;
   background-color: var(--white);
 }
-#thank-you-state {
-  display: none;
-  outline: none;
+.thank-you-state {
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
@@ -155,7 +154,7 @@ p {
     max-width: 25.75rem;
     border-radius: 30px;
   }
-  #rating-state {
+  .rating-state {
     padding: 2rem 1.5rem;
     gap: 2rem;
   }
@@ -198,7 +197,7 @@ p {
     line-height: 1.5rem;
     letter-spacing: 0.17px;
   }
-  #thank-you-state {
+  .thank-you-state {
     padding: 2.78125rem 2.25rem;
     gap: 2rem;
   }
@@ -208,4 +207,7 @@ p {
   .selected-rating {
     padding: 0.2rem 1.2187rem 0;
   }
+}
+.hidden {
+  display: none;
 }
