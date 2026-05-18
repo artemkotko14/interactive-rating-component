@@ -21,7 +21,7 @@ body {
   font-optical-sizing: auto;
 }
 .card {
-  max-width: 327px;
+  max-width: 20.4375rem;
   border-radius: 15px;
   background: var(--gradient);
 }
@@ -152,7 +152,7 @@ p {
 }
 @media screen and (min-width: 600px) {
   .card {
-    max-width: 412px;
+    max-width: 25.75rem;
     border-radius: 30px;
   }
   #rating-state {
