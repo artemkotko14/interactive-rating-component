@@ -15,7 +15,9 @@ ratingInput.forEach((input) => {
 
     const selectedLabel = event.target.nextElementSibling;
     ratingError.classList.add("hidden");
-    selectedLabel.classList.add("selected");
+    if (selectedLabel) {
+      selectedLabel.classList.add("selected");
+    }
   });
 });
 
