@@ -128,7 +128,7 @@ p {
 }
 #thank-you-state {
   display: none;
-
+  outline: none;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
