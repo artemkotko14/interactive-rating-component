@@ -7,7 +7,7 @@ const thankYouState = document.getElementById("thank-you-state");
 const selectedRatingText = document.querySelector(".selected-rating");
 
 let selectedRating = null;
-// for (let i = 0; i < ratingInput.length; i++)
+
 ratingInput.forEach((input) => {
   input.addEventListener("change", function () {
     let selectedRadio = rating.querySelector('input[name="rating"]:checked');
