@@ -31,6 +31,10 @@ rating.addEventListener("change", function (event) {
 });
 
 btnSubmit.addEventListener("click", function () {
+  if (!selectedRating) {
+    ratingError.classList.remove("hidden");
+    return;
+  }
   ratingState.classList.add("hidden");
   thankYouState.classList.remove("hidden");
 
