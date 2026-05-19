@@ -57,15 +57,25 @@ height: 42px;
 border-radius: 50%;
 ```
 
+I've learned how to move visual selection logic from JavaScript into CSS.
+
+```css
+.rating-input:checked + .rating-label {
+  background-color: var(--orange);
+  color: var(--grey900);
+}
+```
+
+I also used adjacent sibling combinator "+" that means “Select the next element immediately after this one.”
+
+```css
+.rating-input: checked + .rating-label;
+```
+
 I’ve learned how to listen for the change event on radio inputs and dynamically update the UI based on the user’s selected rating.
 
 ```js
-  ratingInput[i].addEventListener("change", function () {
-    let selectedRadio = rating.querySelector('input[name="rating"]:checked');
-    let selectedLabel = document.querySelector(
-      `label[for="${selectedRadio.id}"]`,
-    );
-};
+rating.addEventListener("change", function (event) {});
 ```
 
 ### Continued development
