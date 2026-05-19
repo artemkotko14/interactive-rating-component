@@ -1,6 +1,5 @@
 const btnSubmit = document.querySelector(".submit-btn");
 const rating = document.querySelector(".rating");
-const ratingInput = document.querySelectorAll(".rating-input");
 const ratingState = document.getElementById("rating-state");
 const thankYouState = document.getElementById("thank-you-state");
 const selectedRatingText = document.querySelector(".selected-rating");
