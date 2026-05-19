@@ -9,16 +9,26 @@ const thankYouHeading = document.getElementById("thank-you-heading");
 const ratingError = document.getElementById("rating-error");
 
 let selectedRating = null;
-ratingInput.forEach((input) => {
-  input.addEventListener("change", function (event) {
-    ratingLabels.forEach((label) => label.classList.remove("selected"));
+rating.addEventListener("change", function (event) {
+  const selectedInput = event.target;
 
-    const selectedLabel = event.target.nextElementSibling;
-    ratingError.classList.add("hidden");
-    if (selectedLabel) {
-      selectedLabel.classList.add("selected");
-    }
-  });
+  if (!selectedInput.classList.contains("rating-input")) {
+    return;
+  }
+
+  const previousSelected = rating.querySelector(".selected");
+
+  if (previousSelected) {
+    previousSelected.classList.remove("selected");
+  }
+
+  ratingError.classList.add("hidden");
+
+  const selectedLabel = selectedInput.nextElementSibling;
+
+  if (selectedLabel) {
+    selectedLabel.classList.add("selected");
+  }
 });
 
 btnSubmit.addEventListener("click", function () {
