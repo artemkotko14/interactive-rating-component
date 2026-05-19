@@ -20,7 +20,8 @@ rating.addEventListener("change", function (event) {
   if (previousSelected) {
     previousSelected.classList.remove("selected");
   }
-
+  selectedRating = selectedInput.value;
+  selectedRatingText.textContent = `You selected ${selectedRating} out of 5`;
   ratingError.classList.add("hidden");
 
   const selectedLabel = selectedInput.nextElementSibling;
@@ -31,14 +32,6 @@ rating.addEventListener("change", function (event) {
 });
 
 btnSubmit.addEventListener("click", function () {
-  const selectedRadio = rating.querySelector('input[name="rating"]:checked');
-  if (!selectedRadio) {
-    ratingError.classList.remove("hidden");
-    return;
-  }
-  selectedRating = selectedRadio.value;
-  selectedRatingText.textContent = `You selected ${selectedRating} out of 5`;
-
   ratingState.classList.add("hidden");
   thankYouState.classList.remove("hidden");
 
