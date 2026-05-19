@@ -14,20 +14,9 @@ rating.addEventListener("change", function (event) {
     return;
   }
 
-  const previousSelected = rating.querySelector(".selected");
-
-  if (previousSelected) {
-    previousSelected.classList.remove("selected");
-  }
   selectedRating = selectedInput.value;
   selectedRatingText.textContent = `You selected ${selectedRating} out of 5`;
   ratingError.classList.add("hidden");
-
-  const selectedLabel = selectedInput.nextElementSibling;
-
-  if (selectedLabel) {
-    selectedLabel.classList.add("selected");
-  }
 });
 
 btnSubmit.addEventListener("click", function () {

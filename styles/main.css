@@ -56,6 +56,7 @@ h2 {
   font-weight: bold;
   line-height: 1.875rem;
   letter-spacing: 0;
+  outline: none;
 }
 p {
   font-size: 0.875rem;
@@ -87,6 +88,11 @@ p {
     background-color 0.3s ease,
     color 0.3s ease;
 }
+.rating-input:checked + .rating-label {
+  background-color: var(--orange);
+  color: var(--grey900);
+}
+
 .rating-label:hover,
 .rating-input:focus-visible + .rating-label {
   cursor: pointer;
@@ -106,10 +112,7 @@ p {
   width: 0;
   height: 0;
 }
-.selected {
-  background-color: var(--orange);
-  color: var(--grey900);
-}
+
 .submit-btn {
   background-color: var(--orange);
   color: var(--grey950);
