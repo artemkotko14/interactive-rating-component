@@ -37,6 +37,6 @@ btnSubmit.addEventListener("click", function () {
   }
   ratingState.classList.add("hidden");
   thankYouState.classList.remove("hidden");
-
+  // Move focus to newly revealed thank-you state
   thankYouHeading.focus();
 });
